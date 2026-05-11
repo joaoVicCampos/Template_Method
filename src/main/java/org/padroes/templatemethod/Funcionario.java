@@ -30,13 +30,12 @@ public abstract class Funcionario {
         this.salarioBruto = salarioBruto;
     }
 
-    // Template Method — define o esqueleto do algoritmo
     public final double calcularSalarioLiquido() {
         double descontos = calcularDescontos();
         return this.salarioBruto - descontos;
     }
 
-    // Passo variável — cada subclasse implementa suas próprias regras de desconto
+
     protected abstract double calcularDescontos();
 
     public String getTipo() {
